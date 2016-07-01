@@ -43,10 +43,11 @@ h2 {
 }
 h3 {
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.375em;
+	font-size: 1em;
+	line-height: 1.25em;
 	font-weight: normal;
-	line-height: 1.15em;
-	color: #000;
+	color: #988866;
+	margin-top: 1em;
 }
 @media (min-width: 768px) {
 	h1 {
@@ -101,7 +102,7 @@ h3 {
 /*WORK*/
 .work {
 	padding: 5%;
-	background-color: #eee;
+	background-color: #fff;
 }
 @media (min-width: 1224px) {
 	.work {
@@ -117,7 +118,6 @@ h3 {
 }
 .work .summary {
 	padding-bottom: 5%;
-	background-color: #eee;
 }
 .work .bar {
 	width: 5em;
@@ -131,12 +131,11 @@ h3 {
 	width: 100%;
 	height: 0;
 	padding-bottom: 50%;
-	background-size: cover;
-	background-position: center;
 	box-sizing: border-box;
 	position: relative;
 	float: left;
 	margin-bottom: 5%;
+	overflow: hidden;
 }
 @media (min-width: 768px) {
 	.work .projects {
@@ -158,21 +157,44 @@ h3 {
 		margin-bottom: 3%;
 	}
 }
-.work .projects > div:nth-child(1) {
+.work .projects > div:nth-child(1) .background {
 	background-image: url(https://images.unsplash.com/photo-1465205568425-23fdd3805e49?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200);
 }
-.work .projects > div:nth-child(2) {
+.work .projects > div:nth-child(2) .background {
 	background-image: url(https://images.unsplash.com/photo-1465158753229-aa725fff85a1?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=725);
 }
-.work .projects > div:nth-child(3) {
+.work .projects > div:nth-child(3) .background {
 	background-image: url(https://images.unsplash.com/photo-1464621922360-27f3bf0eca75?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=750);
 }
-.work .projects > div:nth-child(4) {
+.work .projects > div:nth-child(4) .background {
 	background-image: url(https://images.unsplash.com/photo-1461352195749-fdba50b79c74?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=750);
 }
-.work .projects > div:nth-child(5) {
+.work .projects > div:nth-child(5) .background {
 	background-image: url(https://images.unsplash.com/photo-1461295025362-7547f63dbaea?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);
 }
+
+.work .projects .background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.work .projects .background {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.work .projects .background:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
 @media (min-width: 768px) {
 	.work .projects > div:nth-child(3) {
 		width: 97%;
@@ -214,5 +236,78 @@ h3 {
 }
 .work .projects p {
 	color: #fff;
+	margin-top: 0;
+}
+
+/*ABOUT*/
+.about > div {
+	padding: 5%;
+}
+@media (min-width: 768px) {
+	.about {
+		background-color: #eee;
+	}
+	.about > div {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+	}
+	.about > div:nth-child(1) {
+		padding-right: 2.5%;
+	}
+	.about > div:nth-child(2) {
+		padding-left: 2.5%;
+	}
+}
+@media (min-width: 1224px) {
+	.about > div {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	.about > div:nth-child(1) {
+		padding-right: 5%;
+	}
+	.about > div:nth-child(2) {
+		padding-left: 5%;
+	}
+}
+@media (min-width: 1824px) {
+	.about > div {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+	.about > div:nth-child(1) {
+		padding-right: 7.5%;
+	}
+	.about > div:nth-child(2) {
+		padding-left: 7.5%;
+	}
+}
+@media (max-width: 767px) {
+	.about .bio {
+		padding-bottom: 5%;
+	}
+}
+@media (max-width: 767px) {
+	.about .experience {
+		background-color: #eee;
+		padding-bottom: 7.5%;
+	}
+}
+.about .experience .company {
+	color: #000;
+	margin: 0.5em 0;
+}
+.about .experience .institution {
+	color: #000;
+	margin-top: 0.5em;
+}
+.about .experience p {
+	margin: 0;
+}
+.about .experience h2 {
+	margin-top: 10%;
+}
+.about .experience h2:first-child {
 	margin-top: 0;
 }
