@@ -5,6 +5,10 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
 .clearfix:after {
 	content: "";
 	clear: both;
@@ -30,7 +34,7 @@ a:hover {
 h1 {
 	font-family: "Playfair Display", serif;
 	font-size: 2em;
-	font-weight: normal;
+	font-weight: normal !important;
 	line-height: 1.25em;
 	color: #fff;
 }
@@ -127,6 +131,13 @@ h3 {
 	margin-top: 2.5em;
 	display: none;
 }
+.work .projects .link {
+	position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 .work .projects > div {
 	width: 100%;
 	height: 0;
@@ -172,7 +183,6 @@ h3 {
 .work .projects > div:nth-child(5) .background {
 	background-image: url(https://images.unsplash.com/photo-1461295025362-7547f63dbaea?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);
 }
-
 .work .projects .background {
 	width: 100%;
 	height: 100%;
@@ -181,10 +191,7 @@ h3 {
 	left: 0;
 	background-size: cover;
 	background-position: center;
-}
-
-.work .projects .background {
-  -moz-transition: all 0.3s;
+	-moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -193,8 +200,6 @@ h3 {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-
 @media (min-width: 768px) {
 	.work .projects > div:nth-child(3) {
 		width: 97%;
