@@ -34,9 +34,9 @@ a:hover {
 h1 {
 	font-family: "Playfair Display", serif;
 	font-size: 2em;
-	font-weight: normal !important;
+	font-weight: normal;
 	line-height: 1.25em;
-	color: #fff;
+	color: #222;
 }
 h2 {
 	font-family: "Playfair Display", serif;
@@ -74,25 +74,66 @@ h3 {
 	}
 }
 
-/*INTRO*/
-.intro {
+/*LANDING*/
+.landing {
 	height: 100vh;
 	background-color: #000;
 	position: relative;
-	padding: 0 5%;
 }
-.intro .wrapper {
+.landing img {
+	width: 25vmin;
 	position: absolute;
-	top: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-60%,-50%);
+}
+#logo path {
+	fill: red;
+}
+
+/*INTRO*/
+.intro {
+	background-color: #eee;
+	position: relative;
+	padding: 5%;
+}
+@media (min-width: 768px) {
+	.intro {
+		padding-bottom: 10%;
+	}
+	.intro .hello {
+		box-sizing: border-box;
+		width: 50%;
+		float: left;
+		padding-right: 2.5%;
+	}
+	.intro .bio {
+		box-sizing: border-box;
+		width: 50%;
+		float: left;
+		padding-left: 2.5%;
+	}
 }
 @media (min-width: 1224px) {
 	.intro {
-		padding: 0 10%;
+		padding: 5% 10% 10% 10%;
+	}
+	.intro .hello {
+		padding-right: 5%;
+	}
+	.intro .bio {
+		padding-left: 5%;
 	}
 }
 @media (min-width: 1824px) {
 	.intro {
-		padding: 0 15%;
+		padding: 5% 15% 10% 15%;
+	}
+	.intro .hello {
+		padding-right: 7.5%;
+	}
+	.intro .bio {
+		padding-left: 7.5%;
 	}
 }
 .intro .bar {
@@ -100,7 +141,10 @@ h3 {
 	height: 2px;
 	background-color: #988866;
 	position: relative;
-	margin-bottom: 5em;
+	margin-bottom: 4vw;
+}
+.intro p:first-child {
+	margin-top: 5vw;
 }
 
 /*WORK*/
@@ -243,6 +287,62 @@ h3 {
 	color: #fff;
 	margin-top: 0;
 }
+
+/*HISTORY*/
+.history {
+	padding: 5%;
+	background-color: #eee;
+}
+@media (min-width: 1224px) {
+	.history {
+		padding: 5% 10%;
+	}
+}
+@media (min-width: 1824px) {
+	.history {
+		padding: 5% 15%;
+	}
+}
+@media (max-width: 768px) {
+	.history .education::before {
+		content: "";
+		margin: 5% 0;
+		height: 2px;
+		width: 25%;
+		background-color: #988866;
+		display: block;
+	}
+}
+@media (min-width: 768px) {
+	.history > div {
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+	}
+	.history .experience {
+		padding-right: 2.5%;
+	}
+	.history .education {
+		padding-left: 2.5%;
+	}
+}
+@media (min-width: 1224px) {
+	.history .experience {
+		padding-right: 5%;
+	}
+	.history .education {
+		padding-left: 5%;
+	}
+}
+@media (min-width: 1824px) {
+	.history .experience {
+		padding-right: 7.5%;
+	}
+	.history .education {
+		padding-left: 7.5%;
+	}
+}
+
 
 /*ABOUT*/
 .about > div {
