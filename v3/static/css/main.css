@@ -124,6 +124,14 @@ a:hover {
 	color: #988866;
 }
 
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #988866;
+}
+
 /*LANDING*/
 .landing {
 	height: 100vh;
@@ -234,4 +242,53 @@ a:hover {
 }
 .work .container > div:nth-child(7) .background {
 	background-image: url(https://images.unsplash.com/photo-1452473767141-7c6086eacf42?dpr=1&auto=compress,format&crop=entropy&fit=crop&w=991&h=661&q=800);
+}
+
+/*HISTORY*/
+.history {
+	background-color: #eee;
+}
+.history p {
+	margin: 0;
+}
+.history .company {
+	color: #000;
+	margin: 0.5em 0;
+}
+.history .institution {
+	color: #000;
+	margin-top: 0.5em;
+}
+@media (max-width: 768px) {
+	.history .education::before {
+		content: "";
+		margin: 1.75em 0;
+		height: 2px;
+		width: 20%;
+		background-color: #988866;
+		display: block;
+	}
+}
+
+/*FOOTER*/
+.footer {
+	background-color: #000;
+}
+.footer p {
+	color: #fff;
+}
+.footer p:first-child {
+	margin: 0;
+}
+@media (min-width: 768px) {
+	.footer .container {
+		padding: 3% 1.5%;
+	}
+	.footer p {
+		margin: 0;
+		display: inline;
+	}
+	.footer p:first-child {
+		margin-right: 2em;
+	}
 }
