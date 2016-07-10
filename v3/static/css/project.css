@@ -1,5 +1,38 @@
 @charset "utf-8";
 
+/*NEW GRID SYSTEM*/
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6 {
+	box-sizing: border-box;
+	padding: 0 1.5%;
+	float: left;
+}
+.col-xs-3 { width: 50%; }
+.col-xs-6 { width: 100%; }
+@media (min-width: 768px) {
+	.col-sm-1 { width: 16.66666% }
+	.col-sm-2 { width: 33.33333% }
+	.col-sm-3 { width: 50% }
+	.col-sm-4 { width: 66.66666% }
+	.col-sm-5 { width: 83.33333% }
+	.col-sm-6 { width: 100% }
+}
+@media (min-width: 992px) {
+	.col-md-1 { width: 16.66666% }
+	.col-md-2 { width: 33.33333% }
+	.col-md-3 { width: 50% }
+	.col-md-4 { width: 66.66666% }
+	.col-md-5 { width: 83.33333% }
+	.col-md-6 { width: 100% }
+}
+@media (min-width: 1200px) {
+	.col-lg-1 { width: 16.66666% }
+	.col-lg-2 { width: 33.33333% }
+	.col-lg-3 { width: 50% }
+	.col-lg-4 { width: 66.66666% }
+	.col-lg-5 { width: 83.33333% }
+	.col-lg-6 { width: 100% }
+}
+
 /*TYPOGRAPHY*/
 h1 {
 	font-family: "Playfair Display", serif;
@@ -118,23 +151,58 @@ a:hover {
 /*CONTENT*/
 .content {
 	background-color: #000;
-	height: 100vh;
 }
-@media (min-width: 768px) {
-	.content .summary {
-		padding: 0;
-		float: none;
-		margin: auto;
-	}
+.content .summary {
+	float: none;
+	margin: auto;
+	margin-bottom: 5%;
+}
+.content .summary p:first-child {
+	margin: 0;
 }
 .content .summary div p {
 	display: inline;
 	margin-right: 2em;
 }
-.content img {
+.content .item {
+	margin-bottom: 5%;
+}
+@media (min-width: 768px) {
+	.content .item {
+		margin-bottom: 3%;
+	}
 }
 .content .square {
 	height: 0;
 	padding-bottom: 100%;
-	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+.content .wide {
+	height: 0;
+	padding-bottom: 47.5%;
+	background-size: cover;
+	background-position: center;
+}
+.content .tall {
+	height: 0;
+	padding-bottom: 200%;
+	background-size: cover;
+	background-position: center;
+}
+.content .circle {
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.fix-height {
+	padding-bottom: 99.99999% !important;
+}
+.content .more-projects h2 {
+	text-align: center;
+	padding-top: 5%;
+	margin: 5% 0;
+	border-top: 1px solid #666;
 }
