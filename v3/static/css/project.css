@@ -180,13 +180,13 @@ a:hover {
 }
 .content .wide {
 	height: 0;
-	padding-bottom: 47.5%;
+	padding-bottom: 47.5%; /*Find the exact number for this*/
 	background-size: cover;
 	background-position: center;
 }
 .content .tall {
 	height: 0;
-	padding-bottom: 200%;
+	padding-bottom: 125%;
 	background-size: cover;
 	background-position: center;
 }
@@ -205,4 +205,15 @@ a:hover {
 	padding-top: 5%;
 	margin: 5% 0;
 	border-top: 1px solid #666;
+	font-size: 1.25em;
+}
+.content h3{
+	font-size: 1.25em;
+	color: #fff;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+}
+.content .wrapper .wide {
+	padding-bottom: 75%;
 }
