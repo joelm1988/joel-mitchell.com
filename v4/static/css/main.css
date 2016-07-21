@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/*UNIVERSAL & RESETS*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #988866;
+}
+
+/*TYPOGRAPHY*/
+h1 {
+	font-family: "Playfair Display", serif;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1.25em;
+	color: #222;
+	margin-bottom: 0.25em;
+}
+h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 1.625em;
+	font-weight: normal;
+	line-height: 1.15em;
+	color: #988866;
+}
+@media (min-width: 768px) {
+	h1 {
+		font-size: 2.5em;
+		line-height: 1.25em;
+		margin-bottom: 0.75em;
+	}
+	h2 {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+}
+@media (min-width: 992px) {
+	h1 {
+		font-size: 3em;
+		line-height: 1.25em;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 2.25em;
+		line-height: 1.5em;
+	}
+}
+h3 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	font-weight: normal;
+	color: #988866;
+	margin-top: 1em;
+}
+p {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #666;
+	margin-top: 1em;
+}
+a, a:visited {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 2px solid #988866;
+}
+a:hover {
+	color: #988866;
+}
+
+/*LANDING*/
+.landing {
+	height: 100vh;
+	position: relative;
+	background-color: #000;
+}
+.landing img {
+	width: 25vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-60%,-50%);
+}
+@media (orientation:portrait) {
+	.landing img {
+		width: 35vw
+	}
+}
+
+/*STRUCTURE*/
+.container {
+	width: 90%;
+	margin: auto;
+}
+.square {
+	float: left;
+	width: 50%;
+	height: 0;
+	padding-bottom: 50%;
+}
+.wide {
+	float: left;
+	width: 100%;
+	height: 0;
+	padding-bottom: 50%;
+}
+.tall {
+	float: left;
+	width: 50%;
+	height: 0;
+	padding-bottom: 100%;
+}
+@media (min-width: 992px) {
+	.square {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+	.wide {
+		width: 50%;
+		padding-bottom: 25%;
+	}
+	.tall {
+		width: 25%;
+		padding-bottom: 50%;
+	}
+}
+
+/*INTRO*/
+
+/*WORK*/
+.work {
+	padding: 5% 0;
+}
+.work:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.work .intro {
+	padding: 5% 0 10%;
+}
+@media (min-width: 992px) {
+	.work .intro {
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 0;
+		padding: 0;
+		padding-bottom: 25%;
+	}
+	.work .intro .wrapper {
+		position: absolute;
+		padding: 0 5%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+/*HISTORY*/
+
+/*FOOTER*/
