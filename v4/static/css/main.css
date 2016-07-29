@@ -76,12 +76,12 @@ p {
 	color: #666;
 	margin-top: 1em;
 }
-a, a:visited {
+p a, p a:visited {
 	color: inherit;
 	text-decoration: none;
 	border-bottom: 2px solid #988866;
 }
-a:hover {
+p a:hover {
 	color: #988866;
 }
 
@@ -117,28 +117,22 @@ a:hover {
 }
 .square {
 	width: 50%;
-	padding-bottom: 50%;
 }
 .wide {
 	width: 100%;
-	padding-bottom: 50%;
 }
 .tall {
 	width: 50%;
-	padding-bottom: 100%;
 }
 @media (min-width: 992px) {
 	.square {
 		width: 25%;
-		padding-bottom: 25%;
 	}
 	.wide {
 		width: 50%;
-		padding-bottom: 25%;
 	}
 	.tall {
 		width: 25%;
-		padding-bottom: 50%;
 	}
 }
 
@@ -168,18 +162,24 @@ a:hover {
 	background-position: center;
 	transition: all 0.5s;
 }
+.work .projects .wide .background {
+	padding-bottom: 50%;
+}
+.work .projects .tall .background {
+	padding-bottom: 200%;
+}
 .work .projects .background:hover {
 	transform: scale(1.1);
 }
 
 /*Mobile*/
 #project-1 { top: 0; left: 0;}
-#project-2 { top: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1465158753229-aa725fff85a1?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=725);}
-#project-3 { top: 25%; left: 0; background-image: url(https://images.unsplash.com/photo-1464621922360-27f3bf0eca75?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=750);}
-#project-4 { top: 50%; left: 0; background-image: url(https://images.unsplash.com/photo-1461352195749-fdba50b79c74?crop=entropy&fit=crop&fm=jpg&h=500&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=750);}
-#project-5 { top: 50%; right: 0; background-image: url(https://images.unsplash.com/photo-1463123081488-789f998ac9c4?dpr=1&auto=compress,format&crop=entropy&fit=crop&w=991&h=661&q=80);}
-#project-6 { top: 75%; right: 0; background-image: url(https://images.unsplash.com/photo-1452473767141-7c6086eacf42?dpr=1&auto=compress,format&crop=entropy&fit=crop&w=991&h=661&q=800);}
-#project-7 { display: none; background-image: url(https://images.unsplash.com/photo-1452573992436-6d508f200b30?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=998&q=80);}
+#project-2 { top: 0; right: 0;}
+#project-3 { top: 25%; left: 0;}
+#project-4 { top: 50%; left: 0;}
+#project-5 { top: 50%; right: 0;}
+#project-6 { top: 75%; right: 0;}
+#project-7 { display: none;}
 
 @media (min-width: 992px) {
 	.work {
